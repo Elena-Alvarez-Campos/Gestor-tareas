@@ -68,6 +68,7 @@ article{
     
 }
 #ejemplo{
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -89,6 +90,7 @@ article{
     color: rgb(60, 62, 65);
 }
 #des-tarea{
+    height: auto;
     font-family: "Mulish", sans-serif;
     border-width: 1px;
     border-style: solid;
@@ -132,5 +134,9 @@ article{
 
 /*Modo oscuro*/
 .fondoOscuro{
-    background-color: rgb(109, 170, 140);
+    background-color: rgb(71, 106, 89);
+}
+.tarea-osc{
+    background-color: rgb(111, 111, 111);
+    color:aliceblue;
 }
