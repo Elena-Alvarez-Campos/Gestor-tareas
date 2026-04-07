@@ -41,7 +41,7 @@ $(document).ready(function(){
                 posicionCompletar++
             }
         }
-        if($("#ejemplo").hasClass(posicionEliminar)){
+        if($("#ejemplo").hasClass(posicionCompletar)){
             $("#ejemplo").toggleClass("finTarea")
         }
     })
