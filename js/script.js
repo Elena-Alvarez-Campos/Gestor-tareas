@@ -6,6 +6,17 @@ $(document).ready(function(){
     $("#nuevaTarea").click(function(){
         //clone() clona el contenedor
         //if($("#ejemplo").hasClass("0")){
+        const estructura=$("<div>",{class:"ejemplo"})
+        const titulo=$("<input>",{type:"text",class:"campo-texto",placeholder:"Título de la tarea"})
+        const contenido=$("<textarea>",{name:"text",class:"des-tarea",placeholder:"Añade la tarea",rows:"4"})
+        const grupoBot=$("<div>",{class:"botones"})
+        const completar=$("<button>",{class:"completado"}).text("Completar")
+        const borrar=$("<button>",{class:"eliminar"}).text("Eliminar")
+
+        grupoBot.append(completar,borrar);
+        estructura.append(titulo,contenido,grupoBot)
+        $("article").prepend(estructura)
+        /*
         let nuevoTask=$("#ejemplo").clone();
         posicionID++
         posicionesArt.push(posicionID)
@@ -18,7 +29,8 @@ $(document).ready(function(){
         }
         nuevoTask.removeClass("0")
         nuevoTask.addClass(""+posicionID)
-        $("article").prepend(nuevoTask)
+        */
+        //$("article").prepend(nuevoTask)
         //}
         
        /* Código de ejemplo
@@ -33,7 +45,13 @@ $(document).ready(function(){
     $(".completado").click(function(){
         let posicionCompletar=0;
         let claseEncontrada=false
-        $(this).parent().parent().toggleClass("finTarea");
+        $(this).closest(".ejemplo").toggleClass("finTarea");
+        /*
+        if($(this).parent.parent.hasClass("finTarea")){
+            $(this).text("Restaurar")
+        }else{
+            $(this).text("Completar6")
+        }*/
 
         /*
         //while(claseEncontrada==flase){
@@ -49,8 +67,13 @@ $(document).ready(function(){
         }*/
     })
     //Eliminar
-    $("#eliminar").click(function(){
-        let posicionEliminar=0;
+    $(".eliminar").click(function(){
+        //let posicionEliminar=0;
+        $(this).parent().parent().remove()
+        /*
+        if($("#ejemplo").hasClass(posicionEliminar)){
+            $("#ejemplo").remove()
+        }*/
         /*
         if($("#ejemplo").hasClass(posicionEliminar)){
             $("#ejemplo").remove()
