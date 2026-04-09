@@ -42,16 +42,14 @@ $(document).ready(function(){
 
     })
     //Completar tarea
-    $(".completado").click(function(){
-        let posicionCompletar=0;
-        let claseEncontrada=false
+    $(document).on("click",".completado",function(){
         $(this).closest(".ejemplo").toggleClass("finTarea");
-        /*
-        if($(this).parent.parent.hasClass("finTarea")){
+        
+        if($(this).closest(".ejemplo").hasClass("finTarea")){
             $(this).text("Restaurar")
         }else{
-            $(this).text("Completar6")
-        }*/
+            $(this).text("Completar")
+        }
 
         /*
         //while(claseEncontrada==flase){
@@ -67,9 +65,10 @@ $(document).ready(function(){
         }*/
     })
     //Eliminar
-    $(".eliminar").click(function(){
+    $(document).on('click', '.eliminar', function(){
         //let posicionEliminar=0;
-        $(this).parent().parent().remove()
+        //$(this).parent().parent().remove()
+        $(this).closest('.ejemplo').remove();
         /*
         if($("#ejemplo").hasClass(posicionEliminar)){
             $("#ejemplo").remove()
@@ -85,7 +84,9 @@ $(document).ready(function(){
     $("#modo").click(function(){
         $("body").toggleClass("fondoOscuro")
         $("h2").toggleClass("tarea-osc")
+        $("")
     })
+    
 
 
 
