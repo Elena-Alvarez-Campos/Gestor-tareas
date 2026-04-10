@@ -126,20 +126,24 @@ article{
     padding-left: 2vh;
     padding-right: 2vh;
 }
+.botones{
+    align-self: center;
+}
 /*Tarea completada*/
 .finTarea{
     background-color: rgba(213, 218, 223, 0.534);
     border-color: rgb(32, 32, 32);
     text-decoration: line-through;
 }
-
 /*Modo oscuro*/
 .fondoOscuro{
-    background-color: rgb(71, 106, 89);
+    background-color: rgb(45, 64, 55);
 }
 .tarea-osc{
-    background-color: rgb(71, 71, 71);
-    color:aliceblue;
+    background-color: rgb(44, 44, 44);
+    color:rgb(191, 191, 192);
 }
-
-/*BOTON INCOMP*/
+.fin-osc{
+    background-color: rgb(60, 62, 65);
+    text-decoration:line-through;
+}

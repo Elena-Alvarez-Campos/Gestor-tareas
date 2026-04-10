@@ -43,9 +43,14 @@ $(document).ready(function(){
     })
     //Completar tarea
     $(document).on("click",".completado",function(){
-        $(this).closest(".ejemplo").toggleClass("finTarea");
-        
-        if($(this).closest(".ejemplo").hasClass("finTarea")){
+        if($(this).closest(".ejemplo").hasClass("tarea-osc")){
+            $(this).closest(".ejemplo").toggleClass("fin-osc");
+        }
+        else{
+            $(this).closest(".ejemplo").toggleClass("finTarea");
+        }
+
+        if($(this).closest(".ejemplo").hasClass("finTarea")||$(this).closest(".ejemplo").hasClass("fin-osc")){
             $(this).text("Restaurar")
         }else{
             $(this).text("Completar")
@@ -81,11 +86,13 @@ $(document).ready(function(){
     })
     
     //Modo oscuro (no definitivo)
+    /*
     $("#modo").click(function(){
         $("body").toggleClass("fondoOscuro")
         $("h2").toggleClass("tarea-osc")
-        $("")
-    })
+        $(".ejemplo").toggleClass("tarea-osc")
+        $("article").toggleClass("tarea-osc")
+    })*/
     
 
 
